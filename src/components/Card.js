@@ -9,7 +9,7 @@ export default function Card({card, onCardClick}) {
     return (
         <div className="element">
             <button type="button" aria-label="Удалить" className="element__trash element__trash_disabled"></button>
-            <img src={card.link} onClick={handleCardClick} alt="" className="element__image"></img>
+            <img src={card.link} onClick={handleCardClick} alt={card.name} className="element__image"></img>
             <div className="element__caption">
                 <h2 className="element__name">{card.name}</h2>
                 <div className="element__like-container">

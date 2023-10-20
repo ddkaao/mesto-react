@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PopupWithForm({title, name, children, isOpen, onClose}) {
+export default function PopupWithForm({title, name, children, buttonText, isOpen, onClose}) {
 
     const popupOpened = isOpen ? 'popup_opened' : '';
 
@@ -11,6 +11,7 @@ export default function PopupWithForm({title, name, children, isOpen, onClose}) 
                 <h2 className="popup__title">{title}</h2>
                 <form name={`${name}`} className="form form_type-profile" noValidate>
                     {children}
+                    <button type="submit" className="popup__submit-btn popup__submit-btn_avatar">{buttonText}</button>
                 </form>
             </div>
         </div>
