@@ -83,6 +83,15 @@ class Api {
         .then(this._getResponse)
     }
 
+
+    changeLikeCardStatus(id, isLiked) {
+        if (isLiked) {
+            return this.like(id);
+        } else {
+            return this.unlike(id);
+        }
+    }
+
 }
 
 /* Создание экземпляров Api */
